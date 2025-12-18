@@ -53,8 +53,8 @@ Repository = "https://github.com/EleutherAI/lm-evaluation-harness"
 api = ["requests", "aiohttp", "tenacity", "tqdm", "tiktoken"]
 hf = ["transformers>=4.1","torch>=1.8", "accelerate>=0.26.0", "peft>=0.2.0",]
 vllm = ["vllm>=0.4.2"]
-gptq = ["auto-gptq[triton]>=0.6.0"]
-gptqmodel = ["gptqmodel>=1.0.9"]
+# gptq = ["auto-gptq[triton]>=0.6.0"]
+# gptqmodel = ["gptqmodel>=1.0.9"]
 ipex = ["optimum-intel"]
 ibm_watsonx_ai = ["ibm_watsonx_ai>=1.1.22", "python-dotenv"]
 # mamba requires CUDA (nvcc) - cannot build on macOS/CPU-only systems
@@ -108,10 +108,10 @@ conflicts = [
       { extra = "acpbench" },
       { extra = "tasks" },
     ],
-    [
-      { extra = "gptq" },
-      { extra = "vllm" },
-    ],
+    # [
+    #   { extra = "gptq" },
+    #   { extra = "vllm" },
+    # ],
 ]
 
 [tool.pymarkdown]
